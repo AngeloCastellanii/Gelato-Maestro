@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://mejb0y71cfag"]
+
+[ext_resource type="Script" uid="uid://drgp2uhxldsi4" path="res://main.gd" id="1_6lbh5"]
+
+[node name="Main" type="Control" unique_id=1206905156]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6lbh5")
+
+[node name="BG" type="ColorRect" parent="." unique_id=967405022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.43211025, 0.43211025, 0.4321102, 1)
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=1022254158]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BtnEntregar" type="Button" parent="VBox" unique_id=178431227]
+layout_mode = 2
+text = "Entregar Pedido"
+
+[node name="LblResultado" type="Label" parent="VBox" unique_id=1992620173]
+layout_mode = 2
+text = "---"
+horizontal_alignment = 1
+
+[node name="LblPedido" type="Label" parent="VBox" unique_id=869610460]
+layout_mode = 2
+text = "Cargando pedido"
+horizontal_alignment = 1
+
+[node name="LblMiHelado" type="Label" parent="VBox" unique_id=1151151192]
+layout_mode = 2
+text = "Mi helado:"
+horizontal_alignment = 1
+
+[node name="HBox" type="HBoxContainer" parent="VBox" unique_id=1589671376]
+layout_mode = 2
+alignment = 1
+
+[node name="BtnFresa" type="Button" parent="VBox/HBox" unique_id=1103127164]
+layout_mode = 2
+text = "Fresa
+"
+
+[node name="BtnVainilla" type="Button" parent="VBox/HBox" unique_id=43713412]
+layout_mode = 2
+text = "Vainilla
+"
+
+[node name="BtnChocolate" type="Button" parent="VBox/HBox" unique_id=1387560281]
+layout_mode = 2
+text = "Chocolate
+
+"
+
+[node name="BtnMenta" type="Button" parent="VBox/HBox" unique_id=872771371]
+layout_mode = 2
+text = "Menta
+
+"
+
+[connection signal="pressed" from="VBox/BtnEntregar" to="." method="_on_btn_entregar_pressed"]
+[connection signal="pressed" from="VBox/HBox/BtnFresa" to="." method="_on_btn_fresa_pressed"]
+[connection signal="pressed" from="VBox/HBox/BtnVainilla" to="." method="_on_btn_vainilla_pressed"]
+[connection signal="pressed" from="VBox/HBox/BtnChocolate" to="." method="_on_btn_chocolate_pressed"]
+[connection signal="pressed" from="VBox/HBox/BtnMenta" to="." method="_on_btn_menta_pressed"]

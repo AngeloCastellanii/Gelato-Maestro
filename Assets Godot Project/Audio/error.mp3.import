@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d5kuwidwgwxj"
+path="res://.godot/imported/error.mp3-83a96abab0a436c538ac85861794dabd.mp3str"
+
+[deps]
+
+source_file="res://Assets Godot Project/Audio/error.mp3"
+dest_files=["res://.godot/imported/error.mp3-83a96abab0a436c538ac85861794dabd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

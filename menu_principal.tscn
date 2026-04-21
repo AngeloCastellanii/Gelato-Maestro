@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cglvtj5xaj7b3"]
+
+[ext_resource type="Script" uid="uid://cgoel8kxchlmo" path="res://menu_principal.gd" id="1_gmcsc"]
+[ext_resource type="Texture2D" uid="uid://bcnnt50w44k6k" path="res://Assets Godot Project/Pantalla de inicio.png" id="2_ul6ys"]
+[ext_resource type="AudioStream" uid="uid://d3l7ysyfy0u4d" path="res://Assets Godot Project/Audio/Musica fondo.mp3" id="3_ns3he"]
+[ext_resource type="AudioStream" uid="uid://dwyc13v24ihga" path="res://Assets Godot Project/Audio/Pop botones.mp3" id="4_fa1tu"]
+
+[node name="MenuPrincipal" type="Control" unique_id=1717105684]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gmcsc")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1687889814]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ul6ys")
+expand_mode = 3
+
+[node name="Iniciar" type="Button" parent="." unique_id=1301936308]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.45000002
+anchor_right = 0.5
+anchor_bottom = 0.45000002
+offset_left = -146.0
+offset_top = -38.600006
+offset_right = 155.0
+offset_bottom = 38.399994
+text = "
+"
+flat = true
+
+[node name="Creditos" type="Button" parent="." unique_id=380915351]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.61700004
+anchor_right = 0.503
+anchor_bottom = 0.61700004
+offset_left = -150.45605
+offset_top = -38.81604
+offset_right = 150.54395
+offset_bottom = 38.18396
+flat = true
+
+[node name="Salir" type="Button" parent="." unique_id=1257022011]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50600004
+anchor_top = 0.79600006
+anchor_right = 0.50600004
+anchor_bottom = 0.79600006
+offset_left = -150.91205
+offset_top = -38.808044
+offset_right = 150.08795
+offset_bottom = 38.191956
+flat = true
+
+[node name="PanelCreditos" type="ColorRect" parent="." unique_id=722911807]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4392157)
+
+[node name="Label" type="Label" parent="PanelCreditos" unique_id=1459653921]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -381.0
+offset_top = -148.0
+offset_right = 361.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 32
+text = "\"Gelato Maestro
+Desarrollado por: Angelo Castellani
+Profesor: Manuel Cabello
+Universidad Rafael Urdaneta
+Musica: Music by Mykola Odnoroh from Pixabay
+Sound Effect from Pixabay \""
+horizontal_alignment = 1
+
+[node name="BtnCerrarCreditos" type="Button" parent="PanelCreditos" unique_id=1755034871]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060000002
+anchor_top = 0.95900005
+anchor_right = 0.060000002
+anchor_bottom = 0.95900005
+offset_left = -64.12
+offset_top = -26.432007
+offset_right = 64.88
+offset_bottom = 26.567993
+theme_override_font_sizes/font_size = 32
+text = "VOLVER"
+
+[node name="Musica fondo" type="AudioStreamPlayer" parent="." unique_id=375519402]
+stream = ExtResource("3_ns3he")
+volume_db = -34.788
+autoplay = true
+
+[node name="SfxClick" type="AudioStreamPlayer" parent="." unique_id=1315220334]
+stream = ExtResource("4_fa1tu")
+volume_db = -20.071
+
+[connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="PanelCreditos/BtnCerrarCreditos" to="." method="_on_btn_cerrar_creditos_pressed"]

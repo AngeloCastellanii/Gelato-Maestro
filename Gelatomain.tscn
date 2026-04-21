@@ -1,0 +1,326 @@
+[gd_scene format=3 uid="uid://mejb0y71cfag"]
+
+[ext_resource type="Script" uid="uid://drgp2uhxldsi4" path="res://main.gd" id="1_6lbh5"]
+[ext_resource type="Texture2D" uid="uid://dpfjr0vb4dmc1" path="res://Assets Godot Project/Fondo Helados.png" id="2_2hfo2"]
+[ext_resource type="Texture2D" uid="uid://cccn1ifethcuh" path="res://Assets Godot Project/Sin fondo/Sabor_Fresa-removebg-preview.png" id="3_rho1m"]
+[ext_resource type="Texture2D" uid="uid://d04dvirf52hjr" path="res://Assets Godot Project/Sin fondo/Sabor_Vainilla-removebg-preview.png" id="4_wgv0a"]
+[ext_resource type="Texture2D" uid="uid://cape0roq8comi" path="res://Assets Godot Project/Sin fondo/Sabor_Chocolate-removebg-preview.png" id="5_ne3ym"]
+[ext_resource type="Texture2D" uid="uid://cpfk2d7o84gfm" path="res://Assets Godot Project/Sin fondo/Sabor_Menta-removebg-preview.png" id="6_noqkg"]
+[ext_resource type="Texture2D" uid="uid://bvw4iqjf8ar4t" path="res://Assets Godot Project/Sin fondo/Barquilla-removebg-preview.png" id="7_i5iyd"]
+[ext_resource type="Texture2D" uid="uid://6ebeo2rlxiaf" path="res://Assets Godot Project/Sin fondo/Campana-removebg-preview.png" id="8_rho1m"]
+[ext_resource type="Texture2D" uid="uid://rj4qmwsa052b" path="res://Assets Godot Project/Sin fondo/Corazon_de_vidas-removebg-preview.png" id="9_ne3ym"]
+[ext_resource type="Texture2D" uid="uid://8bvt1gentknn" path="res://Assets Godot Project/Sin fondo/Cliente_mujer_3-removebg-preview.png" id="10_2hfo2"]
+[ext_resource type="AudioStream" uid="uid://d3l7ysyfy0u4d" path="res://Assets Godot Project/Audio/Musica fondo.mp3" id="11_2hfo2"]
+[ext_resource type="AudioStream" uid="uid://dwyc13v24ihga" path="res://Assets Godot Project/Audio/Pop botones.mp3" id="12_xybon"]
+[ext_resource type="AudioStream" uid="uid://cx6jfyqtl5e4t" path="res://Assets Godot Project/Audio/Timbre caja registradora.mp3" id="13_ky37r"]
+[ext_resource type="AudioStream" uid="uid://d5kuwidwgwxj" path="res://Assets Godot Project/Audio/error.mp3" id="14_r5pvi"]
+
+[sub_resource type="SystemFont" id="SystemFont_ne3ym"]
+
+[sub_resource type="FontVariation" id="FontVariation_noqkg"]
+base_font = SubResource("SystemFont_ne3ym")
+
+[node name="Main" type="Control" unique_id=1206905156]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6lbh5")
+
+[node name="BG" type="TextureRect" parent="." unique_id=814268206]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2hfo2")
+expand_mode = 3
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=1022254158]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TimerCliente" type="Timer" parent="." unique_id=1728010779]
+
+[node name="ConoBase" type="TextureRect" parent="." unique_id=1263010258]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 371.0
+offset_right = 326.0
+offset_bottom = 537.0
+texture = ExtResource("7_i5iyd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBox" type="HBoxContainer" parent="." unique_id=1589671376]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 496.0
+offset_right = 929.0
+offset_bottom = 634.0
+alignment = 1
+
+[node name="BtnFresa" type="TextureButton" parent="HBox" unique_id=180765514]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = ExtResource("3_rho1m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnVainilla" type="TextureButton" parent="HBox" unique_id=1328285264]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = ExtResource("4_wgv0a")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnChocolate" type="TextureButton" parent="HBox" unique_id=2144835567]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = ExtResource("5_ne3ym")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnMenta" type="TextureButton" parent="HBox" unique_id=1054865584]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = ExtResource("6_noqkg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BtnEntregar" type="TextureButton" parent="." unique_id=1335918775]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 698.0
+offset_top = 354.0
+offset_right = 831.0
+offset_bottom = 482.0
+texture_normal = ExtResource("8_rho1m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="LblTiempo" type="Label" parent="." unique_id=809003578]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 139.0
+offset_right = 637.0
+offset_bottom = 252.0
+theme_override_fonts/font = SubResource("FontVariation_noqkg")
+theme_override_font_sizes/font_size = 40
+text = "10.0s
+"
+
+[node name="LblPuntos" type="Label" parent="." unique_id=1686522883]
+modulate = Color(0.17423704, 0.6718391, 0.16840997, 1)
+layout_mode = 0
+offset_left = 163.0
+offset_top = 136.0
+offset_right = 193.0
+offset_bottom = 186.0
+theme_override_fonts/font = SubResource("FontVariation_noqkg")
+theme_override_font_sizes/font_size = 36
+text = "0"
+
+[node name="CajaCorazones" type="HBoxContainer" parent="." unique_id=635144262]
+layout_mode = 0
+offset_left = 839.0
+offset_top = 141.0
+offset_right = 1039.0
+offset_bottom = 205.0
+
+[node name="Corazon1" type="TextureRect" parent="CajaCorazones" unique_id=1179912764]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("9_ne3ym")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Corazon2" type="TextureRect" parent="CajaCorazones" unique_id=819141648]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("9_ne3ym")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Corazon3" type="TextureRect" parent="CajaCorazones" unique_id=1454411611]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("9_ne3ym")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ClienteNPC" type="TextureRect" parent="." unique_id=1370444468]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 191.0
+offset_right = 758.0
+offset_bottom = 400.0
+texture = ExtResource("10_2hfo2")
+expand_mode = 1
+
+[node name="CajaTextos" type="VBoxContainer" parent="." unique_id=687937569]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.675
+anchor_top = 0.37
+anchor_right = 0.675
+anchor_bottom = 0.37
+offset_left = -84.60004
+offset_top = -26.76001
+offset_right = 49.399963
+offset_bottom = 26.23999
+alignment = 1
+
+[node name="LblPedido" type="Label" parent="CajaTextos" unique_id=869610460]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_noqkg")
+text = "Cargando pedido"
+horizontal_alignment = 1
+
+[node name="LblMiHelado" type="Label" parent="CajaTextos" unique_id=1151151192]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_noqkg")
+text = "Mi helado:"
+horizontal_alignment = 1
+
+[node name="LblResultado" type="Label" parent="." unique_id=1992620173]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 462.0
+offset_right = 628.0
+offset_bottom = 485.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_noqkg")
+text = "---"
+horizontal_alignment = 1
+
+[node name="Musica fondo" type="AudioStreamPlayer" parent="." unique_id=190166686]
+stream = ExtResource("11_2hfo2")
+volume_db = -34.788
+autoplay = true
+
+[node name="SfxClick" type="AudioStreamPlayer" parent="." unique_id=2089681119]
+stream = ExtResource("12_xybon")
+volume_db = -20.071
+
+[node name="SfxCampana" type="AudioStreamPlayer" parent="." unique_id=137868510]
+stream = ExtResource("13_ky37r")
+volume_db = -20.437
+
+[node name="SfxError" type="AudioStreamPlayer" parent="." unique_id=461478100]
+stream = ExtResource("14_r5pvi")
+volume_db = -20.071
+
+[node name="CapaUI" type="CanvasLayer" parent="." unique_id=582912703]
+process_mode = 3
+
+[node name="FondoOscuro" type="ColorRect" parent="CapaUI" unique_id=173719525]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_vertical = 4
+
+[node name="CajaPausa" type="VBoxContainer" parent="CapaUI/FondoOscuro" unique_id=1071126599]
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 471.0
+offset_top = 218.0
+offset_right = 674.0
+offset_bottom = 443.0
+
+[node name="Label" type="Label" parent="CapaUI/FondoOscuro/CajaPausa" unique_id=873017652]
+layout_mode = 2
+text = "Juego en pausa"
+horizontal_alignment = 1
+
+[node name="BtnContinuar" type="Button" parent="CapaUI/FondoOscuro/CajaPausa" unique_id=1374615289]
+layout_mode = 2
+text = "Continuar Juego"
+
+[node name="BtnFacil" type="Button" parent="CapaUI/FondoOscuro/CajaPausa" unique_id=2087176983]
+layout_mode = 2
+text = "Facil
+"
+
+[node name="BtnIntermedio" type="Button" parent="CapaUI/FondoOscuro/CajaPausa" unique_id=1393236692]
+layout_mode = 2
+text = "Intermedio
+"
+
+[node name="BtnDificil" type="Button" parent="CapaUI/FondoOscuro/CajaPausa" unique_id=390464998]
+layout_mode = 2
+text = "Dificil"
+
+[node name="BtnSalirMenu" type="Button" parent="CapaUI/FondoOscuro/CajaPausa" unique_id=2024603763]
+layout_mode = 2
+text = "Salir
+"
+
+[node name="CajaGameOver" type="VBoxContainer" parent="CapaUI/FondoOscuro" unique_id=498515516]
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 551.0
+offset_top = 219.0
+offset_right = 591.0
+offset_bottom = 259.0
+
+[node name="LblPuntosFinales" type="Label" parent="CapaUI/FondoOscuro/CajaGameOver" unique_id=313035830]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="BtnGameOver" type="Button" parent="CapaUI/FondoOscuro/CajaGameOver" unique_id=1247431439]
+layout_mode = 2
+text = "Volver a Jugar"
+
+[node name="BtnSalirMenu2" type="Button" parent="CapaUI/FondoOscuro/CajaGameOver" unique_id=1638972709]
+layout_mode = 2
+text = "Salir al menu principal"
+
+[node name="CajaTorre" type="VBoxContainer" parent="." unique_id=578763675]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19500001
+anchor_top = 0.683
+anchor_right = 0.19500001
+anchor_bottom = 0.683
+offset_left = -65.640015
+offset_top = -318.584
+offset_right = 76.359985
+offset_bottom = -3.584015
+theme_override_constants/separation = -45
+alignment = 2
+
+[connection signal="timeout" from="TimerCliente" to="." method="_on_timer_cliente_timeout"]
+[connection signal="pressed" from="HBox/BtnFresa" to="." method="_on_btn_fresa_pressed"]
+[connection signal="pressed" from="HBox/BtnVainilla" to="." method="_on_btn_vainilla_pressed"]
+[connection signal="pressed" from="HBox/BtnChocolate" to="." method="_on_btn_choco_pressed"]
+[connection signal="pressed" from="HBox/BtnMenta" to="." method="_on_btn_menta_pressed"]
+[connection signal="pressed" from="BtnEntregar" to="." method="_on_btn_entregar_pressed"]
+[connection signal="pressed" from="CapaUI/FondoOscuro/CajaPausa/BtnContinuar" to="." method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="CapaUI/FondoOscuro/CajaPausa/BtnFacil" to="." method="_on_btn_facil_pressed"]
+[connection signal="pressed" from="CapaUI/FondoOscuro/CajaPausa/BtnIntermedio" to="." method="_on_btn_intermedio_pressed"]
+[connection signal="pressed" from="CapaUI/FondoOscuro/CajaPausa/BtnDificil" to="." method="_on_btn_dificil_pressed"]
+[connection signal="pressed" from="CapaUI/FondoOscuro/CajaPausa/BtnSalirMenu" to="." method="_on_btn_salir_menu_pressed"]
+[connection signal="pressed" from="CapaUI/FondoOscuro/CajaGameOver/BtnGameOver" to="." method="_on_btn_game_over_pressed"]
+[connection signal="pressed" from="CapaUI/FondoOscuro/CajaGameOver/BtnSalirMenu2" to="." method="_on_btn_salir_menu_2_pressed"]

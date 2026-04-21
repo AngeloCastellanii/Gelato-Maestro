@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwyc13v24ihga"
+path="res://.godot/imported/Pop botones.mp3-94d6d187abdd8bdc20ffe60174e88640.mp3str"
+
+[deps]
+
+source_file="res://Assets Godot Project/Audio/Pop botones.mp3"
+dest_files=["res://.godot/imported/Pop botones.mp3-94d6d187abdd8bdc20ffe60174e88640.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
